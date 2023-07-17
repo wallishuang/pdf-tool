@@ -9,4 +9,3 @@ OutputFile = "output.pdf"
 InputFile = "../sample/65-可可爺爺.pdf"
 Pages = "2-3,5-6" # 不能有空白鍵
 OutputFolder = "split_out"
-

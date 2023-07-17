@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
+	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/spf13/viper"
 )
 
@@ -48,7 +48,7 @@ func getConf() *Config {
 }
 
 func main() {
-
+	GoWork()
 }
 
 func GoWork() {
@@ -67,7 +67,7 @@ func GoWork() {
 }
 
 func SplitFile(config *Config) {
-	var conf *pdfcpu.Configuration
+	var conf *model.Configuration
 	pages := config.Split.Pages
 	outFolder := config.Split.OutputFolder
 	if _, err := os.Stat(outFolder); os.IsNotExist(err) {
@@ -86,7 +86,7 @@ func SplitFile(config *Config) {
 }
 
 func MergeCreateFile(config *Config) {
-	var conf *pdfcpu.Configuration
+	var conf *model.Configuration
 	inFiles := []string{}
 	files, _ := ioutil.ReadDir(config.Merge.InputFolder)
 
