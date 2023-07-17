@@ -1,4 +1,4 @@
-Operation = "merge" # merge or split or both
+Operation = "split" # merge or split or both
 
 [Merge]
 InputFolder = "/go-workspace/pdf-operation/sample" # put all pdf files you want to merge in this folder (sort by file name)
