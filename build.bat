@@ -1,1 +1,1 @@
-go build -o bin/pdf-tool.exe ./src/main.go
+go build -o pdf-tool.exe ./main.go
